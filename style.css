@@ -1000,24 +1000,12 @@ body.lang-ku #copyright-text {
     .lang-ku .nav-links-list.active {
         justify-content: center !important;
         text-align: center !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
     .lang-ku .nav-links-list.active li {
         text-align: center !important;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .lang-ku .nav-links-list.active {
-        justify-content: center !important;
-        text-align: center !important;
-    }
-    .lang-ku .nav-links-list.active li {
-        position: relative;
-        right: 0;
-        text-align: center !important;
-        justify-content: center;
-        justify-items: center;
         width: 100%;
     }
 }
@@ -1172,4 +1160,5 @@ body.lang-ku #copyright-text {
         margin-bottom: 0;
     }
 }
+        
         

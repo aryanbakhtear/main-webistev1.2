@@ -169,9 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
             'aboutus-supervisor-name1': 'د. هیوا تەها ', // Placeholder
             'aboutus-supervisor-name2': 'ژاڵە تەحسین جەلال', // Placeholder
             'aboutus-idea-title': 'بیرۆکە و پشتیوان', // Placeholder
-            'aboutus-idea-name1': 'ڕەوان کازم حامید', // Placeholder
+            'aboutus-idea-name1': 'ڕەوان کاضم حمد', // Placeholder
             'aboutus-supporter-title': 'پشتیوان', // Placeholder
-            'aboutus-supporter-name1': 'تارق محەمەد سابر', // Placeholder
+            'aboutus-supporter-name1': 'طارق محمد صابر', // Placeholder
             'aboutus-our-message-title': 'پەیامی ئێمە', // Placeholder
             'aboutus-our-message-text': 'سوپاس بۆ سەردانکردنی ماڵپەڕەکەمان! هەموو بەشێکی ئەم پلاتفۆرمە بە حەز و ماندووبوون و کاتژمێرەهای زۆری کاری سەخت دروستکراوە. بەڕێزتان تکایە ڕێز لەو ماندووبوونە بگرن کە لە پشت ئەوەی دروستمان کردووە هەیە. پشتیوانی ئێوە هەموو شتێکە بۆ ئێمە. ئێمە پابەندین بە باشترکردن و گەشەکردن، لەگەڵ نوێکاری و تایبەتمەندی نوێی سەرنجڕاکێش کە هەموو ساڵێک دێن. ئەمە تەنها سەرەتایە – چاوەڕوانی ئەوەی داهاتوو بن!', // Placeholder
             'aboutus-web-design-title': 'دیزاینی وێب و بڵاوکەرەوەی وێب', // Placeholder
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Staff Page Specific - REPLACE WITH ACTUAL KURDISH
             'staff-page-title': 'ستاف', // Placeholder
-            'staff-sem1-title': 'سمیستەری یەکەم', // Placeholder
+            'staff-sem1-title': 'سمستەری یەکەم', // Placeholder
             'staff-s1m1-name': 'جەمال سەعید سەعید', // Placeholder
             'staff-s1m1-degree': 'دبلۆمی باڵا', // Placeholder
             'staff-s1m1-subject': 'بنەماکانی ئامار', // Placeholder
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'staff-s1m5-name': 'ڕێبوار مستەفا', // Placeholder
             'staff-s1m5-degree': 'دبلۆمی باڵا', // Placeholder
             'staff-s1m5-subject': 'تواناکانی زمانی ئینگلیزی', // Placeholder
-            'staff-sem2-title': 'سمیستەری دووەم', // Placeholder
+            'staff-sem2-title': 'سمستەری دووەم', // Placeholder
             'staff-s2m1-name': 'دێهات حمد', // Placeholder
             'staff-s2m1-degree': 'ماستەر', // Placeholder
             'staff-s2m1-subject': 'بنەماکانی پرۆگرامسازی / ++C', // Placeholder
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'staff-s2m5-name': 'ڕێبوار مستەفا', // Placeholder
             'staff-s2m5-degree': 'دبلۆمی باڵا', // Placeholder
             'staff-s2m5-subject': 'تواناکانی زمانی ئینگلیزی ٢', // Placeholder
-            'staff-sem3-title': 'سمیستەری سێیەم', // Placeholder
+            'staff-sem3-title': 'سمستەری سێیەم', // Placeholder
             'staff-s3m1-name': 'ئاراس ناسر یونس', // Placeholder
             'staff-s3m1-degree': 'ماستەر', // Placeholder
             'staff-s3m1-subject': 'بەڕێوەبردنی سەرچاوە مرۆییەکان', // Placeholder
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'staff-s3m5-name': 'بەڵین عەبدولقادر', // Placeholder
             'staff-s3m5-degree': 'ماستەر', // Placeholder
             'staff-s3m5-subject': 'داتابەیس', // Placeholder
-            'staff-sem4-title': 'سمیستەری چوارەم', // Placeholder
+            'staff-sem4-title': 'سمستەری چوارەم', // Placeholder
             'staff-s4m1-name': 'ئاراس ناسر یونس', // Placeholder
             'staff-s4m1-degree': 'ماستەر', // Placeholder
             'staff-s4m1-subject': 'سیستەمی زانیاری', // Placeholder
@@ -300,25 +300,25 @@ document.addEventListener('DOMContentLoaded', () => {
             'dept-list-systems': 'شیکردنەوە و دیزاینی سیستەم (چۆن پلاندانان و دروستکردنی سیستەمی زانیاری)',
             'dept-list-project': 'بەڕێوەبردنی پرۆژە (چۆن پێشەنگی پرۆژەی تیکنەلۆژیا بکەیت)',
             'dept-list-web': 'پەرەپێدانی وێب (دروستکردنی ماڵپەڕ و سیستەمە ئۆنلاینەکان)',
-            'dept-sem1-title': 'بابەتەکانی سەمیستەری یەکەم',
-            'dept-sem1-kurdology': '➣ کوردۆلۆژی',
+            'dept-sem1-title': 'بابەتەکانی سمستەری یەکەم',
+            'dept-sem1-kurdology': '➣ کوردۆلۆجی',
             'dept-sem1-english': '➣ تواناکانی زمانی ئینگلیزی',
             'dept-sem1-computer': '➣ بنەماکانی کۆمپیوتەر',
             'dept-sem1-statistics': '➣ بنەماکانی ئامار',
             'dept-sem1-business': '➣ بنەماکانی بەڕێوەبردنی کاروبار',
-            'dept-sem2-title': 'بابەتەکانی سەمیستەری دووەم',
+            'dept-sem2-title': 'بابەتەکانی سمستەری دووەم',
             'dept-sem2-mis': '➣ سیستەمی زانیاری کارگێری',
             'dept-sem2-english2': '➣ تواناکانی زمانی ئینگلیزی ٢',
             'dept-sem2-programming': '➣ بنەماکانی پرۆگرامسازی / ++C',
             'dept-sem2-web': '➣ دیزاینی وێب (HTML)',
             'dept-sem2-marketing': '➣ بنەماکانی بازاڕگەری',
-            'dept-sem3-title': 'بابەتەکانی سەمیستەری سێیەم',
+            'dept-sem3-title': 'بابەتەکانی سمستەری سێیەم',
             'dept-sem3-hr': '➣ بەڕێوەبردنی سەرچاوە مرۆییەکان',
             'dept-sem3-english': '➣ زمانی ئینگلیزی بۆ کاروبار',
             'dept-sem3-webdev': '➣ پەرەپێدانی وێب',
             'dept-sem3-advprog': '➣ پرۆگرامسازی پێشکەوتوو / ++C',
             'dept-sem3-database': '➣ داتابەیس',
-            'dept-sem4-title': 'بابەتەکانی سەمیستەری چوارەم',
+            'dept-sem4-title': 'بابەتەکانی سمستەری چوارەم',
             'dept-sem4-english': '➣ زمانی ئینگلیزی بۆ کاروبار ٢',
             'dept-sem4-statics': '➣ ئاماری بەڕێوەبردن',
             'dept-sem4-comm': '➣ پەیوەندی کاروبار و تۆڕ',
