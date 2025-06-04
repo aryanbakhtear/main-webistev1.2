@@ -1,0 +1,1175 @@
+@font-face {
+    font-family: 'k24KurdishFont'; /* You can name this whatever you like */
+    src: url('fonts/k24-regular.woff2') format('woff2'), /* Modern browsers - REPLACE 'fonts/k24-regular.woff2' WITH YOUR ACTUAL PATH AND FILENAME */
+         url('fonts/k24-regular.woff') format('woff');   /* Older browsers - REPLACE 'fonts/k24-regular.woff' WITH YOUR ACTUAL PATH AND FILENAME if you have it */
+    /* Add more src lines if you have other formats like .ttf or .otf, or different weights/styles */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Improves perceived performance */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #121212;
+    font-family: 'Noto Sans', sans-serif;
+    cursor: url('triangle-cursor.png'), auto; /* Custom static cursor */
+}
+nav{
+   
+    width: 100%;
+    height: 80px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 
+                0 0 20px 0px rgba(255, 255, 255, 0.315);
+    padding: 0 50px;
+}
+
+nav ul {
+   
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul:first-child { 
+    justify-content: flex-start;
+}
+
+
+
+nav ul:last-child {
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding-right: 10px;
+    margin-right: 70px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(0.8) translateY(2px);
+    color: #9da09e;
+}
+
+nav ul li:hover {
+    transform: translateY(2px);
+    transition: 1s;
+    color: #9da09e;
+}
+
+nav ul li a.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Dropdown styles */
+nav ul li ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1f1f1f;
+    width: 100px;
+    display: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 -5px 5px rgba(255, 255, 255, 0.2);
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin: 0;
+    width: 100%;
+    
+    padding: 10px 0px;
+    text-align: center;
+
+   
+}
+
+nav ul li ul li a {
+    font-size: 16px;
+}
+
+#cursor-follower {
+    position: fixed;
+    left: 0; /* Position will be updated by JavaScript */
+    top: 0;  /* Position will be updated by JavaScript */
+    width: 25px;  /* Size of the main orb */
+    height: 25px; /* Size of the main orb */
+    background-color: rgba(0, 191, 255, 0.6); /* A nice deep sky blue, semi-transparent */
+    border-radius: 50%; /* Makes it a circle */
+    pointer-events: none; /* Crucial: so it doesn't interfere with mouse clicks */
+    z-index: 9999; /* Keeps it on top of other elements */
+    transform: translate(-50%, -50%); /* Centers the orb on the cursor tip */
+    transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out; /* Smooth movement and size changes */
+    box-shadow: 0 0 15px 5px rgba(0, 191, 255, 0.4), /* Outer glow */
+                0 0 5px 2px rgba(255, 255, 255, 0.5) inset; /* Inner subtle white highlight */
+}
+
+/* Optional: Style for when interacting with links or specific elements */
+/* You would add/remove this class with JavaScript on hover of those elements */
+#cursor-follower.active {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 191, 255, 0.8);
+}
+
+.box1{
+    background-color: #121212;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: -65px;
+    box-shadow: 0 -5px 5px rgba(255, 255, 255, 0.2);
+}
+
+.box2{
+    background-color: #121212;
+    width: 100%;
+    height: 65px;
+    position: relative;
+    top: -65px;
+    box-shadow: 0 -5px 5px rgba(255, 255, 255, 0.2);
+}
+
+.box3{
+    background-color: #121212;
+    width: 100%;
+    height: 65px;
+    position: relative;
+    top: -65px;
+    box-shadow: 0 -5px 5px rgba(255, 255, 255, 0.2);
+}
+.robot1{
+    width: 100%;
+    border: 0;
+    height: 100vh;
+    max-height: 946px;
+    min-height: 500px;
+}
+
+.a{
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 90px;
+    padding-top: -30px;
+}
+.b{
+    color: rgb(151, 151, 151);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 20px;
+    padding-top: -30px;
+    padding-left: 50px;
+    margin-right: 50px;
+}
+.c{
+  color: rgb(238, 238, 238);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 20px;
+    padding-top: -30px;   
+    padding-left: 50px;
+    margin-right: 50px;
+   
+}
+.d{
+    color: rgb(151, 151, 151);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 80px;
+    padding-top: -30px; 
+    padding-left: 50px;
+    margin-right: 50px;
+}
+.copyright1{
+    color: rgb(151, 151, 151);
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Hidden by default, shown on mobile */
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Media Query for Mobile Navigation */
+@media screen and (max-width: 768px) {
+    nav ul:last-child, /* Hide the standard nav links UL (the one with .nav-links-list) */
+    .nav-links-list { 
+        display: none; /* Initially hidden on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Height of the navbar */
+        left: 0;
+        background-color: #1f1f1f; /* Same as navbar background */
+        padding: 0; /* Reset padding */
+    }
+
+    nav ul:last-child.active, /* Class to toggle visibility with JS */
+    .nav-links-list.active {
+        display: flex; 
+    }
+
+    nav ul li {
+        padding: 0; /* Reset padding for li elements */
+        margin-right: 0; /* Reset margin for li elements */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px 0; /* Give more tappable area */
+        display: block; /* Make whole area clickable */
+    }
+
+    /* Styles for submenus (e.g., Language) in mobile view */
+    nav ul li ul { /* Targets the submenu ul itself */
+        display: block; 
+        position: static; 
+        width: 100%;    
+        background-color: transparent; 
+        box-shadow: none; 
+        padding: 0; 
+        border-radius: 0;
+        margin-top: -30px; /* Added: Pulls submenu up closer to parent "Language" link */
+    }
+
+    /* Styles for list items within a submenu (Kurdish, English) in mobile view */
+    nav ul li ul li {
+       transition: 1s;
+        margin: 0px; 
+        width: 100%; 
+        padding: -10px; 
+        text-align: center; 
+    }
+
+    /* Styles for links within a submenu (Kurdish, English) in mobile view */
+    nav ul li ul li a {
+        padding: 4px 0; /* Adjusted: Reduced vertical padding for less space between items */
+        font-size: 15px;
+        color: #ccc; 
+        display: block; 
+        width: 100%; 
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
+        padding-left: 10px;
+        margin-right: 20px;
+    }
+
+    /* Optional: Animate hamburger to an X when active */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Adjust padding on main nav for mobile if MIS logo feels too cramped */
+    nav {
+        padding: 0 10px;
+    }
+
+    .a, .b, .c, .d {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+.robot2{
+    width: 100%;
+    border: 0;
+    height: 100vh;
+    max-height: 946px;
+    min-height: 500px;
+    display: block; /* Good for iframes */
+}
+
+/* Staff Details Section Styles */
+.staff-details-section {
+    padding: 40px 20px;
+    padding-top: 100px; /* Adjust if needed, considering fixed nav and other elements */
+    color: #e0e0e0; /* Light text color for dark background */
+    text-align: center;
+}
+
+.staff-details-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.staff-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between cards */
+}
+
+.staff-card {
+    background-color: #2a2a2a; /* Dark card background */
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 8px;
+    padding: 25px;
+    width: 450px; /* Fixed width for cards, or use flex-basis for responsiveness */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.staff-card h3 {
+    font-size: 1.6em;
+    color: #9fe4ff; /* Accent color for name */
+    margin-bottom: 10px;
+}
+
+.staff-card .degree {
+    font-size: 1.1em;
+    color: #bbbbbb;
+    margin-bottom: 5px;
+}
+
+.staff-card .subject {
+    font-size: 1em;
+    color: #999999;
+}
+
+/* Responsive adjustments for staff cards if needed */
+@media screen and (max-width: 768px) {
+    .staff-card {
+        width: calc(50% - 40px); /* Two cards per row on smaller tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .staff-card {
+        width: calc(100% - 40px); /* One card per row on mobile */
+    }
+    .staff-details-section h2 {
+        font-size: 2em;
+    }
+}
+
+/* Thank You Message Styles */
+.thank-you-message {
+    color: white;
+    font-weight: 300; /* Light font weight */
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px; /* Space above the message */
+    line-height: 1.8;
+}
+
+.thank-you-message p {
+    margin-bottom: 15px; /* Space between paragraphs of the message */
+}
+
+.moreinfo a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    width: 170px;
+    max-width: 90%;
+    height: 60px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #121212;
+    color: rgb(184, 179, 179);
+    display: block;
+    margin: 20px auto;
+    top: -280px;
+}
+
+
+/* Media Query for .moreinfo responsiveness */
+@media screen and (max-width: 1000px) {
+    .moreinfo {
+        font-size: 16px;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .moreinfo {
+        top: -260px;
+        font-size: 16px;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .moreinfo {
+        font-size: 14px;
+        width: 120px;
+        height: 45px;
+        line-height: 45px;
+        max-width: 60%;
+    }
+}
+
+.department-page-header {
+    display: flex;
+    justify-content: space-between; /* Pushes left and right divs to the edges */
+    padding: 100px 20px 20px 20px; /* Navbar height (80px) + 20px top spacing, 20px for other sides */
+    align-items: flex-start; /* Align items to the top */
+}
+
+
+
+.department-header-left h2,
+.department-header-right h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: aliceblue;
+    transition: color 0.3s ease; /* Add transition for h2 */
+}
+
+.department-header-left p,
+.department-header-right p {
+    font-size: 1em;
+    margin-top: 0;
+    color: rgb(190, 190, 190);
+    transition: color 0.3s ease; /* Add transition for p */
+}
+
+.department-header-center {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: aliceblue;
+    /* align-self: center; text-align: center; flex-grow: 1; */ /* User added these, ensure they are preserved if present */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for center text */
+}
+
+/* Hover effects */
+.department-header-left:hover h2,
+.department-header-right:hover h2,
+.department-header-left:hover p,
+.department-header-right:hover p,
+.department-header-center:hover {
+    color: #9fe4ff; /* Light blue accent color on hover, same as .mis-info-block h3 */
+}
+
+.department-header-center:hover {
+    transform: scale(1.05); /* Slightly enlarge the center text on hover */
+}
+
+.mis-info-section {
+    display: flex;
+    justify-content: space-between; /* Distributes space between and around content items */
+    padding: 20px; /* Overall padding for the section */
+    gap: 30px; /* Space between the left and right blocks */
+    color: aliceblue; /* Default text color for this section */
+    margin-top: -50px; /* Moved up by 20px by reducing top margin */
+}
+
+.mis-info-block {
+    flex: 1; /* Allows blocks to grow and shrink as needed */
+    padding: 20px;
+    background-color: #1A1A1A; /* Slightly different background for the blocks */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.mis-info-block:hover {
+    transform: translateY(-5px); /* Lifts the block slightly */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* Enhances the shadow */
+}
+
+/* Specific styling for the left block if needed, otherwise general .mis-info-block applies */
+
+
+/* Specific styling for the right block if needed, otherwise general .mis-info-block applies */
+
+
+.mis-info-block h3 {
+    font-size: 1.3em;
+    color: #AEEEEE; /* A light turquoise/blue for headings */
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.mis-info-block p {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #D3D3D3; /* Light gray for paragraph text */
+}
+
+.mis-info-block ul {
+    list-style-type: disc; /* Standard disc bullet points */
+    list-style-position: outside;
+    padding-left: 25px; /* Indentation for list items */
+    margin-top: 10px;
+}
+
+.mis-info-block ul li {
+    font-size: 0.95em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #D3D3D3; /* Light gray for list items */
+}
+
+.semesters-section {
+    display: flex; /* Arrange semester blocks in a row */
+    justify-content: space-around; /* Distribute space around blocks */
+    flex-wrap: wrap; /* Allow blocks to wrap on smaller screens */
+    padding: 40px 20px;
+    color: aliceblue;
+    margin-top: 20px;
+    gap: 20px; /* Add gap between semester blocks */
+}
+
+.semester-block {
+    margin: 10px;
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    flex-basis: calc(50% - 40px);
+    min-width: 350px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for base block */
+}
+
+.semester-block:hover {
+    transform: translateY(-8px); /* Lift the block a bit more */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35); /* More pronounced shadow */
+}
+
+.semester-block h4 {
+    font-size: 1.4em;
+    color: #87CEFA; /* Light sky blue for semester titles */
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    transition: color 0.3s ease; /* Added transition for title color */
+}
+
+.semester-block:hover h4 {
+    color: #FFFFFF; /* Change title to white on hover for a nice contrast */
+}
+
+.semester-block ul {
+    list-style: none; /* Remove default bullet points as ➣ is used */
+    padding-left: 0; /* Remove default padding */
+}
+
+.semester-block ul li {
+    font-size: 1em;
+    color: #E0E0E0; /* Light grey for subject names */
+    margin-bottom: 12px;
+    padding-left: 10px; /* Indent text slightly if ➣ is part of the text */
+    line-height: 1.6;
+}
+
+/* Responsive adjustments for Department Header and MIS Info Section */
+@media screen and (max-width: 768px) {
+    .department-page-header {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text within each item */
+        padding-top: 90px; /* Adjust top padding if needed below nav */
+        gap: 15px; /* Adjust gap between stacked items */
+    }
+
+    .department-header-left,
+    .department-header-right,
+    .department-header-center {
+        width: 100%; /* Allow them to take full width */
+        margin-bottom: 10px; /* Add some space between stacked items */
+    }
+
+    .department-header-center {
+        order: -1; /* Optionally move 'Department' text to the top of this stacked section */
+        font-size: 1.6em; /* Slightly larger font for main 'Department' title on mobile */
+    }
+
+    .mis-info-section {
+        flex-direction: column; /* Stack info blocks vertically */
+        align-items: center; /* Center blocks */
+        margin-top: 20px; /* Adjust margin if the negative margin looked odd on mobile */
+    }
+
+    .mis-info-block {
+        flex-basis: 100%; /* Each block takes full width */
+        max-width: 90%; /* Ensure it doesn't touch screen edges */
+        margin-bottom: 20px; /* Space between stacked blocks */
+    }
+
+    .mis-info-block:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.credits-section {
+    position: relative;
+    top: -100px;
+    padding: 10px 20px;
+    color: aliceblue;
+    padding-top: 100px; /* Space for fixed navbar (80px) + 20px initial clearance */
+    margin-top: -20px;  /* Move it 20px up from the position above */
+    text-align: center; /* Ensuring text-align is here */
+}
+
+.credit-role {
+    margin-bottom: 30px;
+}
+
+.credit-role h3 {
+    font-size: 1.5em;
+    color: #87CEFA; /* Light sky blue, similar to semester titles */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.credit-name {
+    font-size: 1.2em;
+    color: #E0E0E0; /* Light grey for names */
+    margin-bottom: 5px;
+    display: inline-block; /* To allow transform on hover to not affect layout too much */
+    padding: 5px 0;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.credit-name:hover {
+    color: #FFFFFF; /* White on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    cursor: default; /* Change cursor to default as it's not a link */
+}
+
+.our-message-section {
+    position: relative;
+    top: -100px;
+    padding: 40px 20px;
+    margin-top: 30px; /* Space above the message section */
+    color: aliceblue; /* Default text color */
+    text-align: center; /* Center align the text content */
+}
+
+.our-message-section h2 {
+    font-size: 1.8em;
+    color: #87CEFA; /* Light sky blue, consistent with other titles */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.our-message-section p {
+    font-size: 1.1em;
+    color: #E0E0E0; /* Light grey for the paragraph */
+    line-height: 1.8;
+    max-width: 800px; /* Constrain width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.additional-credits-section {
+    position: relative;
+    top: -100px;
+    padding: 30px 20px;
+    margin-top: 40px; /* Space above this new credits section */
+    color: aliceblue;
+    text-align: center;
+}
+
+.credit-role-item {
+    
+    margin-bottom: 25px;
+}
+
+.credit-role-item h4 {
+    font-size: 1.3em; /* Slightly smaller than main roles, or keep same as .credit-role h3 */
+    color: #f9fc53; /* Consistent title color */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.credit-name-item {
+    font-size: 1.1em; /* Consistent name size */
+    color: #E0E0E0;
+    display: inline-block;
+    padding: 4px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.credit-name-item:hover {
+    color: #FFFFFF;
+    transform: scale(1.05);
+    cursor: default;
+}
+
+/* Language-specific alignment */
+.lang-ku {
+    /* You could put very general RTL rules here if needed,
+       but it's often better to target specific elements. */
+    font-family: 'k24KurdishFont', 'Noto Sans', sans-serif; /* Apply k24 font for Kurdish, with fallbacks */
+}
+
+/* Index Page specific text elements */
+.lang-ku #index-main-title {
+    text-align: center; /* Changed from right to center */
+}
+.lang-ku #index-intro-text,
+.lang-ku #index-specialization-admin,
+.lang-ku #index-specialization-it,
+.lang-ku #index-curriculum-intro,
+.lang-ku #index-coursework-it,
+.lang-ku #index-coursework-management,
+.lang-ku #index-integrated-model-text {
+    text-align: right;
+}
+
+/* Align .a, .b, .c, .d text content and adjust padding/margins for RTL */
+.lang-ku .a { /* General rule for .a elements */
+    text-align: right;
+}
+
+.lang-ku .b,
+.lang-ku .c,
+.lang-ku .d {
+    text-align: right;
+    padding-left: 0px;
+    padding-right: 50px; /* Swapped from padding-left */
+    margin-left: 50px;   /* Swapped from margin-right */
+    margin-right: 0px;
+}
+
+/* About Us Page specific text elements */
+.lang-ku #aboutus-page-title, /* Assuming you might add an ID to the title tag */
+.lang-ku #aboutus-supervisor-title,
+.lang-ku #aboutus-supervisor-name1,
+.lang-ku #aboutus-supervisor-name2,
+.lang-ku #aboutus-idea-title,
+.lang-ku #aboutus-idea-name1,
+.lang-ku #aboutus-supporter-title,
+.lang-ku #aboutus-supporter-name1,
+.lang-ku #aboutus-web-design-title,
+.lang-ku #aboutus-web-design-name,
+.lang-ku #aboutus-translator-title,
+.lang-ku #aboutus-translator-name,
+.lang-ku #aboutus-our-message-title,
+.lang-ku #aboutus-our-message-text {
+    text-align: right;
+}
+
+/* Department Page specific text elements */
+.lang-ku #dept-page-title, /* Assuming an ID for the title tag */
+.lang-ku .department-header-left h2,
+.lang-ku .department-header-left p,
+.lang-ku .department-header-center, /* This is already text-align: center, might need specific override if RTL is desired */
+.lang-ku .department-header-right h2,
+.lang-ku .department-header-right p,
+.lang-ku .mis-info-block h3,
+.lang-ku .mis-info-block p,
+.lang-ku .mis-info-block ul li {
+    text-align: right;
+}
+.lang-ku .department-page-header {
+    flex-direction: row-reverse; /* Flips the order of left/center/right for RTL */
+}
+
+.lang-ku .mis-info-section {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.lang-ku .mis-info-block-right {
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Semester blocks on Department page */
+
+.lang-ku .semester-block h4,
+.lang-ku .semester-block ul li {
+    text-align: right;
+}
+
+/* Ensure lists in RTL also have markers on the right if desired (more advanced) */
+.lang-ku .semester-block ul {
+    padding-left: 0; /* Reset padding if any */
+    padding-right: 20px; /* Add padding to the right for list items */
+}
+
+/* You might need to adjust padding/margins for specific elements in RTL mode */
+.lang-ku .mis-info-block ul {
+    padding-left: 0;
+    padding-right: 20px; /* Example for MIS info lists */
+    /* list-style-position: inside; might be needed if bullets are not aligning well */
+}
+
+
+/* Staff Page Specific Text Elements */
+
+.lang-ku .staff-details-section h2, /* e.g., FIRST SEMESTER */
+.lang-ku .staff-card h3,             /* Staff name */
+.lang-ku .staff-card .degree,        /* Staff degree */
+.lang-ku .staff-card .subject,       /* Staff subject */
+.lang-ku .thank-you-message p {
+    text-align: right;
+}
+
+/* For staff cards, if they are in a flex container and you want to reverse their order per row:
+.lang-ku .staff-cards-container {
+    flex-direction: row-reverse; 
+}
+This would make the first card in HTML appear last visually in a row for RTL.
+Decide if this is desired behavior. For now, only text alignment is changed.
+*/
+
+.lang-ku .staff-card {
+    text-align: center !important;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Centered elements might need to be re-evaluated. 
+   If text-align:center was used, it will override text-align:right from .lang-ku. 
+   You might need to remove text-align:center for .lang-ku contexts if right-alignment is preferred for those. 
+   For example, if .credits-section was text-align:center, it will remain centered. 
+*/
+
+/* Example: If you have .text-center class that you want to override for Kurdish */
+/* .lang-ku .text-center { text-align: right !important; } */
+
+/* Navigation items might need adjustments if you want text right-aligned there too */
+
+.lang-ku .nav-links-list li a {
+    text-align: right; /* Make nav links themselves right aligned */
+}
+
+/* For the dropdown menu, ensure items are right aligned */
+.lang-ku nav ul li ul {
+    text-align: center !important;
+}
+.lang-ku nav ul li ul li a {
+    text-align: right;
+    margin-left: 28px;
+     /* Make dropdown links right aligned */
+}
+
+.lang-ku #information { /* Specific rule for the container of #index-main-title */
+    text-align: center; /* Ensure this specific .a element is centered */
+}
+
+.lang-ku .copyright1 {
+    text-align: right;
+}
+
+body.lang-ku #copyright-text {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+}
+
+.lang-ku nav ul,
+.lang-ku nav ul li,
+.lang-ku nav ul li a {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+.lang-ku nav {
+    flex-direction: row-reverse;
+}
+.lang-ku nav ul:first-child {
+    justify-content: flex-end;
+}
+.lang-ku nav ul:last-child,
+.lang-ku .nav-links-list {
+    justify-content: flex-start;
+}
+
+.lang-ku .staff-details-section h2 {
+    text-align: center !important;
+}
+
+.lang-ku .thank-you-message {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.lang-ku body {
+    font-family: 'k24KurdishFont', 'Noto Sans', sans-serif !important;
+}
+
+.lang-ku .about-us-content, .lang-ku .about-us-content * {
+    text-align: center !important;
+    font-weight: bold !important;
+}
+
+.lang-ku .credit-role-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-ku .department-page-header,
+.lang-ku .department-page-header *,
+.lang-ku .mis-info-section,
+.lang-ku .mis-info-section *,
+.lang-ku .semesters-section,
+.lang-ku .semesters-section * {
+    font-weight: bold !important;
+}
+
+.lang-ku nav ul li ul li a {
+    text-align: center !important;
+}
+
+@media screen and (max-width: 768px) {
+    .lang-ku .nav-links-list.active {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    .lang-ku .nav-links-list.active li {
+        text-align: center !important;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lang-ku .nav-links-list.active {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    .lang-ku .nav-links-list.active li {
+        position: relative;
+        right: 0;
+        text-align: center !important;
+        justify-content: center;
+        justify-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lang-ku .department-header-center,
+    .lang-ku .department-header-left,
+    .lang-ku .department-header-right {
+        text-align: center !important;
+        width: 100% !important;
+        
+    }
+    .semester-block {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
+
+  /* From Uiverse.io by ZacharyCrespin */ 
+.spinner {
+    --size: 30px;
+    --color: white;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .spinner::after,.spinner::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    width: var(--size);
+    height: var(--size);
+    top: 50%;
+    animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+    left: 50%;
+    background: var(--color);
+    box-shadow: 0 0 calc(var(--size) / 3) rgba(0, 0, 0, 0.25);
+  }
+  
+  .spinner::after {
+    background: var(--color);
+    top: calc(50% - var(--size));
+    left: calc(50% - var(--size));
+    animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+  }
+  
+  @keyframes down {
+    0%, 100% {
+      transform: none;
+    }
+  
+    25% {
+      transform: translateX(100%);
+    }
+  
+    50% {
+      transform: translateX(100%) translateY(100%);
+    }
+  
+    75% {
+      transform: translateY(100%);
+    }
+  }
+  
+  @keyframes up {
+    0%, 100% {
+      transform: none;
+    }
+  
+    25% {
+      transform: translateX(-100%);
+    }
+  
+    50% {
+      transform: translateX(-100%) translateY(-100%);
+    }
+  
+    75% {
+      transform: translateY(-100%);
+    }
+  }
+
+#loading-screen {
+    z-index: 999999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000062;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+#loading-screen.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#loading-screen.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .department-page-header,
+    .lang-ku .department-page-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 90px;
+        gap: 15px;
+    }
+    .department-header-left,
+    .department-header-right,
+    .department-header-center,
+    .lang-ku .department-header-left,
+    .lang-ku .department-header-right,
+    .lang-ku .department-header-center {
+        
+        text-align: center !important;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .department-header-center,
+    .lang-ku .department-header-center {
+        order: -1;
+        font-size: 1.6em;
+    }
+    .mis-info-section,
+    .lang-ku .mis-info-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .mis-info-block,
+    .lang-ku .mis-info-block {
+        flex-basis: 100%;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    .mis-info-block:last-child,
+    .lang-ku .mis-info-block:last-child {
+        margin-bottom: 0;
+    }
+}
+        

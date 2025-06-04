@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen"><div class="spinner"></div></div>
+    <div id="cursor-follower"></div>
+    <div class="iframe-container reveal-on-scroll" style="position: relative;">
+        <iframe class="robot1" src='https://my.spline.design/hellodistortingintro-eclUcn3RPPFqydEjMC9AAMAs/'></iframe>
+        <div class="iframe-overlay"></div>
+    </div>
+    <div class="box2 reveal-on-scroll"></div>
+    <div class="moreinfo reveal-on-scroll"><a href="#information" id="index-more-info-button">More Information</a></div>
+    </div>
+
+<span class="a reveal-on-scroll" id="information" >  <span id="index-main-title">SHAQLAWA TECHNICAL COLLEGE MANAGEMENT INFORMATION SYSTEM</span> </span>
+    <span class="b reveal-on-scroll" id="index-intro-text">The department was officially inaugurated in the academic year <span style="color: aliceblue; "> <i>2020–2021 at Shaqlawa Technical College</i> </span> <br> marking a significant step in the development of modern education within the institution. In the very same year, it proudly welcomed its first cohort of students, beginning a new chapter in the college's academic offerings.
+        This department is uniquely structured, offering a dual-specialization curriculum that combines two essential fields:</span>
+<span class="c reveal-on-scroll">
+    <span id="index-specialization-admin">➣ Administration</span>
+    <br><br>
+    <span id="index-specialization-it">➣ Information Technology</span>
+    <br><br>
+    <span id="index-curriculum-intro"> <SPAN style="color: rgb(151, 151, 151);">The curriculum is strategically divided to ensure a balanced and practical education, with:</SPAN></span>
+     <br><br>
+     <span id="index-coursework-it">➣ 60% of the coursework focused on Information Technology</span>
+<br><br>
+<span id="index-coursework-management">➣ 40% dedicated to Management and Administration studies</span>
+</span>
+<br>
+
+<span class="d reveal-on-scroll" id="index-integrated-model-text"> This integrated model ensures that students graduate with a strong foundation in both technical and managerial skills, preparing them for the demands of today's job market. As a result, graduates are awarded a diploma that qualifies them in both IT and Administration, significantly increasing their employment opportunities across various sectors.
+
+    One of the department's key strengths is that it creates a clear academic and professional pathway. Upon completion of the program, students are eligible to pursue further studies at the Technical College of Engineering, which opens the door to advanced qualifications and higher-level careers in the field.
+    
+    However, it is important to highlight that only students from a Science high school background are eligible to enroll in this department. This requirement ensures that students have the necessary foundational knowledge to handle the technical nature of the coursework.
+    
+    In conclusion, this department represents a mind-opening opportunity for students who wish to build a career that combines technology and management. It equips students with the dual skills needed in modern workplaces, making them versatile, competitive, and ready to contribute meaningfully in a variety of professional environments.</span>
+
+<span class="copyright1 reveal-on-scroll" id="copyright-text">© 2026      &nbsp;  &nbsp; &nbsp;&nbsp;    www.epumis.com  &nbsp;  &nbsp; &nbsp;&nbsp;   Aryan Bakhtyar ⥼⥽ Ronya Hemn </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav>
+        <ul>
+            <li><a href="#" class="logo" title="Management Information System">MIS</a></li>
+        </ul>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links-list">
+ 
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="staff.html" id="nav-staff">Staff</a></li>
+            <li><a href="department.html" id="nav-department">About Department</a></li>
+            <li><a href="aboutus.html" id="nav-about-us">About Us</a></li>
+            <li><a href="#" id="nav-language-main">Language</a>
+                <ul>
+                    <li><a href="javascript:void(0);" id="lang-kurdish">Kurdish</a></li>
+                    <li><a href="javascript:void(0);" id="lang-english">English</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links-list');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Optional: Close menu when a link is clicked
+        document.querySelectorAll('.nav-links-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the menu is open and the clicked link is not a submenu trigger
+                const parentLi = link.closest('li');
+                const hasSubmenu = parentLi.querySelector('ul');
+
+                if (hamburger.classList.contains('active') && !hasSubmenu) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+                // If it has a submenu and the submenu is not visible, allow default behavior
+                // or implement submenu toggle for mobile here if needed
+            });
+        });
+    </script>
+
+    <script>
+        const follower = document.getElementById('cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            // Update follower position
+            // Using transform for smoother animation & better performance
+            follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+            
+            // If you prefer to update top/left directly (can be less smooth):
+            // follower.style.left = e.clientX + 'px';
+            // follower.style.top = e.clientY + 'px';
+        });
+
+        // Optional: Hide follower when mouse leaves window and show when it enters
+        document.addEventListener('mouseleave', () => {
+            // follower.style.visibility = 'hidden';
+        });
+        document.addEventListener('mouseenter', () => {
+            // follower.style.visibility = 'visible';
+        });
+    </script>
+    <script src="language.js"></script>
+    <!-- From Uiverse.io by ZacharyCrespin --> 
+
+    <script>
+        // Show loading spinner for 1.4 seconds on page load with fade in/out
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.classList.add('show');
+        loadingScreen.classList.remove('hide');
+        loadingScreen.style.display = 'flex';
+        setTimeout(function() {
+            loadingScreen.classList.remove('show');
+            loadingScreen.classList.add('hide');
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 400); // match the CSS transition duration
+        }, 1400);
+
+        // Show loading screen on navigation
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = link.getAttribute('href');
+                if (
+                    href &&
+                    !href.startsWith('#') &&
+                    !href.startsWith('javascript:') &&
+                    !link.hasAttribute('download') &&
+                    link.target !== '_blank'
+                ) {
+                    loadingScreen.style.display = 'flex';
+                    loadingScreen.classList.add('show');
+                    loadingScreen.classList.remove('hide');
+                }
+            });
+        });
+    </script>
+    <script>
+        // Scroll-based animation for reveal-on-scroll elements
+        const revealEls = document.querySelectorAll('.reveal-on-scroll');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

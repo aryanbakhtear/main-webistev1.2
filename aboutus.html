@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS - About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen"><div class="spinner"></div></div>
+    <div id="cursor-follower"></div>
+    <div class="iframe-container reveal-on-scroll" style="position: relative;">
+        <iframe class="robot2" src='https://my.spline.design/thebluedarkliquidshape-t0bMpZrDPgFliV42AbmhhCrD/'></iframe>
+        <div class="iframe-overlay"></div>
+        <div class="box3 reveal-on-scroll"></div>
+    </div>
+    <div class="additional-credits-section reveal-on-scroll">
+        <div class="credit-role-item">
+            <h4 id="aboutus-web-design-title">Web Design and Web Publisher</h4>
+            <p class="credit-name-item" id="aboutus-web-design-name">Aryan Bakhtyar Jameel</p>
+        </div>
+        <div class="credit-role-item">
+            <h4 id="aboutus-translator-title">ENGLISH TRANSLATOR AND DESIGN HELPER</h4>
+            <p class="credit-name-item" id="aboutus-translator-name">Ronya Hemn AbdullQahar</p>
+        </div>
+    </div>
+
+</div>
+    <div class="main-content-area about-us-content reveal-on-scroll" style="padding-top: 20px; min-height: calc(100vh - 180px); text-align: center;">
+        <div class="credits-section reveal-on-scroll">
+            <div class="credit-role">
+                <h3 id="aboutus-supervisor-title">SUPERVISOR and supporter</h3>
+                <p class="credit-name" id="aboutus-supervisor-name1">dr. Hiwa Taha </p> <br>
+                <p class="credit-name" id="aboutus-supervisor-name2">Zhala Tahsen Jalal</p>
+            </div>
+            <div class="credit-role">
+                <h3 id="aboutus-idea-title">idea and supporter</h3>
+                <p class="credit-name" id="aboutus-idea-name1">RAWAN KAZM HAMED</p>
+            </div>
+            <div class="credit-role">
+                <h3 id="aboutus-supporter-title">supporter</h3>
+                <p class="credit-name" id="aboutus-supporter-name1">Tariq Muhammad Sabr</p>
+            </div>
+        </div>
+
+        <div class="our-message-section reveal-on-scroll">
+            <h2 id="aboutus-our-message-title">OUR MESSAGE</h2>
+            <p id="aboutus-our-message-text">
+                Thank you for visiting our website! Every part of this platform is built with passion, effort, and countless hours of hard work. 
+                We kindly ask that you respect and value the dedication behind what we've created. Your support means everything to us. 
+                We're committed to improving and growing, with exciting new updates and features coming every year. 
+                This is just the beginning – stay tuned for what's next!
+            </p>
+        </div>
+
+      
+
+    <nav>
+        <ul>
+            <li><a href="#" class="logo" title="Management Information System">MIS</a></li>
+        </ul>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links-list">
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="staff.html" id="nav-staff">Staff</a></li>
+            <li><a href="department.html" id="nav-department">About Department</a></li>
+            <li><a href="aboutus.html" id="nav-about-us">About Us</a></li>
+            <li><a href="#" id="nav-language-main">Language</a>
+                <ul>
+                    <li><a href="javascript:void(0);" id="lang-kurdish">Kurdish</a></li>
+                    <li><a href="javascript:void(0);" id="lang-english">English</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <span class="copyright1 reveal-on-scroll" id="copyright-text">© 2025      &nbsp;  &nbsp; &nbsp;&nbsp;    www.epumis.com  &nbsp;  &nbsp; &nbsp;&nbsp;   Aryan Bakhtyar ⥼⥽ Ronya Hemn </span>
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links-list');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                const parentLi = link.closest('li');
+                const hasSubmenu = parentLi.querySelector('ul');
+
+                if (hamburger.classList.contains('active') && !hasSubmenu) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        const follower = document.getElementById('cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            // follower.style.visibility = 'hidden';
+        });
+        document.addEventListener('mouseenter', () => {
+            // follower.style.visibility = 'visible';
+        });
+    </script>
+    <script src="language.js"></script>
+    <script>
+        // Show loading spinner for 1.4 seconds on page load with fade in/out
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.classList.add('show');
+        loadingScreen.classList.remove('hide');
+        loadingScreen.style.display = 'flex';
+        setTimeout(function() {
+            loadingScreen.classList.remove('show');
+            loadingScreen.classList.add('hide');
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 400);
+        }, 1400);
+
+        // Show loading screen on navigation
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = link.getAttribute('href');
+                if (
+                    href &&
+                    !href.startsWith('#') &&
+                    !href.startsWith('javascript:') &&
+                    !link.hasAttribute('download') &&
+                    link.target !== '_blank'
+                ) {
+                    loadingScreen.style.display = 'flex';
+                    loadingScreen.classList.add('show');
+                    loadingScreen.classList.remove('hide');
+                }
+            });
+        });
+    </script>
+    <script>
+    // Scroll-based animation for reveal-on-scroll elements
+    const revealEls = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

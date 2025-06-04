@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS - Department</title> <!-- Changed title slightly -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="loading-screen"><div class="spinner"></div></div>
+    <div class="department-page-header reveal-on-scroll">
+        <div class="department-header-right">
+            <h2 id="dept-head-title">Head of Department</h2>
+            <p id="dept-head-name">Ms. Gardun Khursheed Ezat</p>
+        </div>
+        <div class="department-header-center" id="dept-page-title">Department</div>
+        <div class="department-header-left">
+            <h2 id="dept-dean-title">Dean of the Department</h2>
+            <p id="dept-dean-name">Mr. Tarq Muhammad Sabr</p>
+        </div>
+    </div>
+
+<div id="cursor-follower"></div>
+<div class="iframe-container reveal-on-scroll" style="position: relative;">
+    <iframe class="robot2" src='https://my.spline.design/motionandbooleansthelogoprinter-5S6gHQ9zpkRSaXDzQi1xVEJQ/'></iframe>
+    <div class="iframe-overlay"></div>
+    <div class="box3 reveal-on-scroll"></div>
+</div>
+<nav>
+    <ul>
+        <li><a href="index.html" class="logo" title="Management Information System" id="nav-logo-title">MIS</a></li>
+    </ul>
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links-list">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="staff.html" id="nav-staff">Staff</a></li>
+        <li><a href="department.html" id="nav-department">About Department</a></li>
+        <li><a href="aboutus.html" id="nav-about-us">About Us</a></li>
+        <li><a href="#" id="nav-language-main">Language</a>
+            <ul>
+                <li><a href="javascript:void(0);" id="lang-kurdish">Kurdish</a></li>
+                <li><a href="javascript:void(0);" id="lang-english">English</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="mis-info-section reveal-on-scroll">
+    <div class="mis-info-block mis-info-block-left">
+        <h3 id="dept-what-learn-title">What do you learn in a Management Information Systems (MIS) college?</h3>
+        <p id="dept-what-learn-intro">Let me explain simply:</p>
+        <p id="dept-what-learn-desc">In an MIS college, you learn how to use technology to solve business problems. Here are the main things you usually study AND How computers work hardware and software basics</p>
+        
+           
+       
+    </div>
+    <div class="mis-info-block mis-info-block-right">
+        <ul id="dept-what-learn-list">
+            <li id="dept-list-databases">Databases (how to store and organize data)</li>
+            <li id="dept-list-networking">Networking (how computers connect and share information)</li>
+            <li id="dept-list-programming">Programming (writing simple programs, usually languages like Java, or C++)</li>
+            <li id="dept-list-business">Business basics (management, marketing, accounting)</li>
+            <li id="dept-list-systems">Systems analysis and design (how to plan and create information systems)</li>
+            <li id="dept-list-project">Project management (how to lead technology projects)</li>
+            <li id="dept-list-web">Web development (making websites and online systems)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="semesters-section reveal-on-scroll">
+    <div class="semester-block">
+        <h4 id="dept-sem1-title">FIRST SEMESTER SUBJECTS</h4>
+        <ul>
+            <li id="dept-sem1-kurdology">➣ Kurdology</li>
+            <li id="dept-sem1-english">➣ English Skills</li>
+            <li id="dept-sem1-computer">➣ Computer essentials</li>
+            <li id="dept-sem1-statistics">➣ Statistic principles</li>
+            <li id="dept-sem1-business">➣ Business administration principles</li>
+        </ul>
+    </div>
+    <div class="semester-block">
+        <h4 id="dept-sem2-title">SECOND SEMESTER SUBJECTS</h4>
+        <ul>
+            <li id="dept-sem2-mis">➣ Management information system</li>
+            <li id="dept-sem2-english2">➣ English skills 2</li>
+            <li id="dept-sem2-programming">➣ Programming fundamentals / c++</li>
+            <li id="dept-sem2-web">➣ Web Design (HTML)</li>
+            <li id="dept-sem2-marketing">➣ Marketing principles</li>
+        </ul>
+    </div>
+    <div class="semester-block">
+        <h4 id="dept-sem3-title">THIRD SEMESTER SUBJECTS</h4>
+        <ul>
+            <li id="dept-sem3-hr">➣ Human Resource Management</li>
+            <li id="dept-sem3-english">➣ English language for business</li>
+            <li id="dept-sem3-webdev">➣ Web Development</li>
+            <li id="dept-sem3-advprog">➣ Advanced programming / c++</li>
+            <li id="dept-sem3-database">➣ Database</li>
+        </ul>
+    </div>
+    <div class="semester-block">
+        <h4 id="dept-sem4-title">FOURTH SEMESTER SUBJECTS</h4>
+        <ul>
+            <li id="dept-sem4-english">➣ English language for business 2</li>
+            <li id="dept-sem4-statics">➣ Management statics</li>
+            <li id="dept-sem4-comm">➣ Business communication & network</li>
+            <li id="dept-sem4-knowledge">➣ Knowledge Management</li>
+            <li id="dept-sem4-advdb">➣ Advanced Databases</li>
+        </ul>
+    </div>
+</div>
+<span class="copyright1 reveal-on-scroll" id="copyright-text">© 2025      &nbsp;  &nbsp; &nbsp;&nbsp;    www.epumis.com  &nbsp;  &nbsp; &nbsp;&nbsp;   Aryan Bakhtyar ⥼⥽ Ronya Hemn </span>
+<script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links-list');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Optional: Close menu when a link is clicked
+    document.querySelectorAll('.nav-links-list a').forEach(link => {
+        link.addEventListener('click', () => {
+            // Check if the menu is open and the clicked link is not a submenu trigger
+            const parentLi = link.closest('li');
+            const hasSubmenu = parentLi.querySelector('ul');
+
+            if (hamburger.classList.contains('active') && !hasSubmenu) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+            // If it has a submenu and the submenu is not visible, allow default behavior
+            // or implement submenu toggle for mobile here if needed
+        });
+    });
+</script>
+
+<script>
+    const follower = document.getElementById('cursor-follower');
+
+    document.addEventListener('mousemove', (e) => {
+        // Update follower position
+        // Using transform for smoother animation & better performance
+        follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+        
+        // If you prefer to update top/left directly (can be less smooth):
+        // follower.style.left = e.clientX + 'px';
+        // follower.style.top = e.clientY + 'px';
+    });
+
+    // Optional: Hide follower when mouse leaves window and show when it enters
+    document.addEventListener('mouseleave', () => {
+        // follower.style.visibility = 'hidden';
+    });
+    document.addEventListener('mouseenter', () => {
+        // follower.style.visibility = 'visible';
+    });
+</script>
+
+<script src="language.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('click', function(e) {
+        if (e.target && e.target.id === 'lang-kurdish') {
+            e.preventDefault();
+            localStorage.setItem('language', 'ku');
+            location.reload();
+        }
+        if (e.target && e.target.id === 'lang-english') {
+            e.preventDefault();
+            localStorage.setItem('language', 'en');
+            location.reload();
+        }
+    });
+});
+</script>
+<script>
+    // Show loading spinner for 1.4 seconds on page load with fade in/out
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.classList.add('show');
+    loadingScreen.classList.remove('hide');
+    loadingScreen.style.display = 'flex';
+    setTimeout(function() {
+        loadingScreen.classList.remove('show');
+        loadingScreen.classList.add('hide');
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+        }, 400);
+    }, 1400);
+
+    // Show loading screen on navigation
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = link.getAttribute('href');
+            if (
+                href &&
+                !href.startsWith('#') &&
+                !href.startsWith('javascript:') &&
+                !link.hasAttribute('download') &&
+                link.target !== '_blank'
+            ) {
+                loadingScreen.style.display = 'flex';
+                loadingScreen.classList.add('show');
+                loadingScreen.classList.remove('hide');
+            }
+        });
+    });
+</script>
+<script>
+    // Scroll-based animation for reveal-on-scroll elements
+    const revealEls = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
