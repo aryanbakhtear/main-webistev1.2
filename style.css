@@ -998,15 +998,25 @@ body.lang-ku #copyright-text {
 
 @media screen and (max-width: 768px) {
     .lang-ku .nav-links-list.active {
-        justify-content: center !important;
-        text-align: center !important;
-        align-items: center !important;
-        display: flex !important;
-        flex-direction: column !important;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
     .lang-ku .nav-links-list.active li {
-        text-align: center !important;
+        text-align: center;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lang-ku .nav-links-list.active li a {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

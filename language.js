@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'staff-s1m3-name': 'گەردوون خورشید عیزەت', // Placeholder
             'staff-s1m3-degree': 'ماستەر', // Placeholder
             'staff-s1m3-subject': 'بنەماکانی کارگێڕی کار', // Placeholder
-            'staff-s1m4-name': 'طارق محەمەد سابر', // Placeholder
+            'staff-s1m4-name': 'طارق محمد صابر', // Placeholder
             'staff-s1m4-degree': 'ماستەر', // Placeholder
             'staff-s1m4-subject': 'بنەماکانی کۆمپیوتەر', // Placeholder
             'staff-s1m5-name': 'ڕێبوار مستەفا', // Placeholder
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'staff-s2m2-name': 'هیوا طە', // Placeholder
             'staff-s2m2-degree': 'دکتۆرا', // Placeholder
             'staff-s2m2-subject': 'دیزاینی وێب (HTML)', // Placeholder
-            'staff-s2m3-name': 'طارق محەمەد سابر', // Placeholder
+            'staff-s2m3-name': 'طارق محمد صابر', // Placeholder
             'staff-s2m3-degree': 'ماستەر', // Placeholder
             'staff-s2m3-subject': 'سیستەمی زانیاری کارگێڕی', // Placeholder
             'staff-s2m4-name': 'ئاراس ناسر یونس', // Placeholder
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'dept-head-name': ' گەردوون خورشید عیزەت',
             'dept-page-title': 'سیستەمی زانیاری کارگێری ',
             'dept-dean-title': 'ڕاگری بەش',
-            'dept-dean-name': ' تارق محەمەد سابر',
+            'dept-dean-name': ' تارق محمد صابر',
             'dept-what-learn-title': 'لە بەشی سیستەمی زانیاری کارگێری (MIS) چی فێردەبیت؟',
             'dept-what-learn-intro': 'بە شێوەیەکی سادە ڕوون دەکەمەوە:',
             'dept-what-learn-desc': 'لە بەشی MIS، فێری ئەوە دەبیت چۆن تیکنەلۆژیا بەکاربهێنی بۆ چارەسەری کێشەکانی کاروبار. ئەمانە گرنگترین بابەتەکانن کە فێری دەبیت و چۆن کۆمپیوتەر کاردەکات (هاردوێر و سۆفتوێر):',
